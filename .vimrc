@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-easy-align' 
   Plug 'tomasr/molokai'
   Plug 'pangloss/vim-javascript' 
+  Plug 'tpope/vim-surround' 
 call plug#end()
 
 
@@ -71,12 +72,6 @@ colorscheme molokai
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\\t/
 
-" cycle between files
-nnoremap <Leader>j <C-w>j
-nnoremap <Leader>k <C-w>k
-nnoremap <Leader>h <C-w>h
-nnoremap <Leader>l <C-w>l
-
 " Highlight active column
 set cuc cul"
 set tabstop=2
@@ -98,3 +93,16 @@ map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<Leader>p'
+
+" cycle between files
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>l <C-w>l
+
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+" add this line to preset conceal: set conceallevel=1
+map <leader>con :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
