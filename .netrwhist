@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/razajafri/Development/jellyvision/talentshow/src/reducers/elements'
-let g:netrw_dirhist_2='/Users/razajafri/Development/jellyvision/talentshow/src/actions/elements'
-let g:netrw_dirhist_3='/Users/razajafri/Development/jellyvision/talentshow/src/containers'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/razajafri/.vim'
+let g:netrw_dirhist_2='/Users/razajafri/Development/jellyvision/talentshow'
+let g:netrw_dirhist_3='/Users/razajafri/Development/jellyvision/talentshow/src'
+let g:netrw_dirhist_4='/Users/razajafri/Development/jellyvision/talentshow/src/selectors'
+let g:netrw_dirhist_5='/Users/razajafri/Development/jellyvision/talentshow'
+let g:netrw_dirhist_6='/Users/razajafri/Development/jellyvision/talentshow/src'
+let g:netrw_dirhist_7='/Users/razajafri/Development/jellyvision/talentshow/src/containers'
+let g:netrw_dirhist_8='/Users/razajafri/.vim'

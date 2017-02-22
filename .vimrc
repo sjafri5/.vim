@@ -3,12 +3,14 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 
-call plug#begin('~/.vim/plugged') 
-  Plug 'junegunn/vim-easy-align' 
+call plug#begin('~/.vim/plugged')
+  Plug 'junegunn/vim-easy-align'
   Plug 'tomasr/molokai'
-  Plug 'pangloss/vim-javascript' 
-  Plug 'tpope/vim-surround' 
+  Plug 'pangloss/vim-javascript'
+  Plug 'tpope/vim-surround'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
 call plug#end()
 
 
@@ -30,6 +32,18 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 " ---------------------------------------------------------------------
 
+"  UltiSnips settings
+" ---------------------------------------------------------------------
+" Trigger configuration for snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+" ---------------------------------------------------------------------
 
 " highlight search matches
 set hlsearch
@@ -118,4 +132,6 @@ let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
 let g:javascript_conceal_return               = "⇚"
 " add this line to preset conceal: set conceallevel=1
-map <leader>con :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+
+
+nnoremap <leader>con :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
