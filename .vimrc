@@ -8,14 +8,27 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomasr/molokai'
   Plug 'pangloss/vim-javascript' 
   Plug 'tpope/vim-surround' 
+  Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 
+" Nerdcommenter settings 
+" ---------------------------------------------------------------------
+" Add spaces after comment delimiters by default
+ let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+" let g:NERDCompactSexyComs = 1
+" ---------------------------------------------------------------------
+
+" EasyAlign settings 
+" ---------------------------------------------------------------------
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" ---------------------------------------------------------------------
 
 
 " highlight search matches
