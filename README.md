@@ -5,8 +5,9 @@
 ## installation
 1) clone this repo
 2) create a sym link in the original .vimrc:
-`ln -s .vim/.vimrc .vimrc`
-3) run Vim-Plug
+
+`ln -s <path_to_project>/.vimrc ~/.vimrc`
+3) `. ~/.vimrc`
 
 
 to add new vim-plugin:
